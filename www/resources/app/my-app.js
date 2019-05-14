@@ -35,6 +35,7 @@ var mainView = App.views.create('.view-main');
 
 
 let wifiManager = window.cordova.plugins.WifiManagerPlugin;
+
 wifiManager.startWifiScan(
     function success() {
         console.log('Successs', result);
