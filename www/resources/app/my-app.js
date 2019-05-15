@@ -47,23 +47,23 @@ document.addEventListener('deviceready', function() {
 }, false);
 
 
-function ssidHandler(s) {
-    App.dialog.alert("Current SSID" + s);
-}
 
-function fail(e) {
-    App.dialog.alert("Failed" + e);
-}
-
-function getConnectedSSID() {
-    App.dialog.alert('getConnect function');
-    WifiWizard2.getConnectedSSID(ssidHandler, fail);
-}
+// function getConnectedSSID() {
+//     App.dialog.alert('getConnect function');
+//     WifiWizard2.getConnectedSSID();
+// }
 
 function connectWifi() {
     WifiWizard2.timeout(4000).then(function() {
-        App.dialog.alert('1 step timeout work');
-        getConnectedSSID();
+        App.dialog.alert('timeout work');
+        WifiWizard2.getConnectedSSID(
+            function(result) {
+                App.dialog.alert(result);
+            },
+            function(error) {
+                App.dialog.alert(error);
+            }
+        );
     })
 }
 
