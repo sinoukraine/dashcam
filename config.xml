@@ -12,7 +12,7 @@
     <author email="support@sinopacific.co" href="http://sinopacific.co">
         Sinopacific Co Limited
     </author>
-    <content src="index.html" />
+    <content src="http://android.app.quiktrak.eu/dash-cam/" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
