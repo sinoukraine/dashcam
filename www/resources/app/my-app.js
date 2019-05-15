@@ -34,18 +34,27 @@ var App = new Framework7({
 var mainView = App.views.create('.view-main');
 
 
-let wifiManager = window.cordova.plugins.WifiManagerPlugin;
 
-wifiManager.startWifiScan(
-    function success() {
-        console.log('Successs', result);
-        App.dialog.alert('Successs', result);
-    },
-    function error() {
-        console.log('Error' + result);
-        App.dialog.alert('Error' + result);
-    }
-);
+
+
+
+
+
+
+
+document.addEventListener('deviceready', function() {
+    App.dialog.alert('Yes');
+    // Call some WifiWizard2.method after deviceready fired
+}, false);
+
+
+
+// function connectWifi(){
+//     WifiWizard2.timeout(4000).then( function(){
+//         // do something after waiting 4 seconds
+//         App.dialog.alert('timeout work')
+//     })
+// }
 
 
 

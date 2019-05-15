@@ -243,6 +243,9 @@ label.item-checkbox input[type=checkbox]:checked~.icon-checkbox {
 
 /* HOME PAGE */
 
+.navbar .left a{
+    padding: 0 16px;
+}
 #app .navbar i{
     color: white;
     font-size: 32px;
