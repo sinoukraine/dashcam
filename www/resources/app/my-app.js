@@ -43,18 +43,19 @@ var mainView = App.views.create('.view-main');
 
 
 document.addEventListener('deviceready', function() {
-    App.dialog.alert('Yes');
+    // App.dialog.alert('Yes');
     // Call some WifiWizard2.method after deviceready fired
+    connectWifi();
 }, false);
 
 
 
-// function connectWifi(){
-//     WifiWizard2.timeout(4000).then( function(){
-//         // do something after waiting 4 seconds
-//         App.dialog.alert('timeout work')
-//     })
-// }
+function connectWifi() {
+    WifiWizard2.timeout(4000).then(function() {
+        // do something after waiting 4 seconds
+        App.dialog.alert('timeout work')
+    })
+}
 
 
 
