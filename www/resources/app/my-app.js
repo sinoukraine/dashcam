@@ -47,13 +47,23 @@ document.addEventListener('deviceready', function() {
 }, false);
 
 
+function ssidHandler(s) {
+    App.dialog.alert("Current SSID" + s);
+}
+
+function fail(e) {
+    App.dialog.alert("Failed" + e);
+}
+
+function getConnectedSSID() {
+    App.dialog.alert('getConnect function');
+    WifiWizard2.getConnectedSSID(ssidHandler, fail);
+}
 
 function connectWifi() {
     WifiWizard2.timeout(4000).then(function() {
-        // do something after waiting 4 seconds
-        App.dialog.alert('timeout work');
-        App.dialog.alert(WifiWizard2.getConnectedSSID())
-
+        App.dialog.alert('1 step timeout work');
+        getConnectedSSID();
     })
 }
 
