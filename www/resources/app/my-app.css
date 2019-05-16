@@ -52,21 +52,25 @@ input[type='radio']:checked {
 .no-border:after {
     background-color: transparent !important;
 }
+
 .no-border:before {
     background-color: transparent !important;
 }
-
 
 label.item-checkbox input[type=checkbox]:checked~.icon-checkbox {
     background-color: #6F86D6 !important;
     border-color: #6F86D6 !important;
 }
-.ios .toggle input[type=checkbox]:checked+.toggle-icon{
+
+.ios .toggle input[type=checkbox]:checked+.toggle-icon {
     background-color: #6F86D6 !important;
 }
-.md .toggle input[type=checkbox]:checked+.toggle-icon:after{
+
+.md .toggle input[type=checkbox]:checked+.toggle-icon:after {
     background-color: #6F86D6 !important;
 }
+
+
 /* 
 #app .f7-icons {
     font-size: 44px;
@@ -102,14 +106,17 @@ label.item-checkbox input[type=checkbox]:checked~.icon-checkbox {
     border-bottom: 1px solid #ccc;
 }
 
+
 /* START PAGE */
-.start-page{
+
+.start-page {
     background-image: url(../images/bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.start-page .logo-block{
+
+.start-page .logo-block {
     background-color: white;
     -webkit-box-shadow: 0px 0px 20px -9px rgba(111, 134, 214, 1);
     -moz-box-shadow: 0px 0px 20px -9px rgba(111, 134, 214, 1);
@@ -123,9 +130,10 @@ label.item-checkbox input[type=checkbox]:checked~.icon-checkbox {
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
 }
+
 .start-page img {
     max-width: 450px;
-    width: 100%;    
+    width: 100%;
 }
 
 
@@ -182,15 +190,19 @@ label.item-checkbox input[type=checkbox]:checked~.icon-checkbox {
     border-bottom: 1px solid #ccc;
 }
 
+
 /* LOGO MENU */
-#mainMenu{
+
+#mainMenu {
     background: linear-gradient(to right, #48c6ef, #6f86d6);
 }
-#mainMenu .logoMenu{
+
+#mainMenu .logoMenu {
     width: 100%;
     max-width: 300px;
 }
-#mainMenu .logoLink{
+
+#mainMenu .logoLink {
     padding: 15px;
     background-color: #fff;
     border-radius: 15px;
@@ -199,15 +211,17 @@ label.item-checkbox input[type=checkbox]:checked~.icon-checkbox {
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
 }
-#mainMenu ul{
+
+#mainMenu ul {
     background-color: transparent;
     padding: 15px;
 }
-#mainMenu ul .item-content i{
+
+#mainMenu ul .item-content i {
     color: #fff;
 }
 
-#mainMenu ul .item-content .item-title{
+#mainMenu ul .item-content .item-title {
     color: #fff;
     font-family: 'product_reg';
     font-size: 19px;
@@ -243,19 +257,20 @@ label.item-checkbox input[type=checkbox]:checked~.icon-checkbox {
 
 /* HOME PAGE */
 
-.navbar .left a{
+.navbar .left a {
     padding: 0 16px;
 }
-#app .navbar i{
+
+#app .navbar i {
     color: white;
     font-size: 32px;
     margin-top: 10px;
 }
 
-#app .navbar i.icon-left{
+#app .navbar i.icon-left {
     color: white;
     font-size: 19px;
-    margin-top: 6px;
+    margin-top: 3px;
 }
 
 .toolbar-bottom {
@@ -303,6 +318,58 @@ label.item-checkbox input[type=checkbox]:checked~.icon-checkbox {
 }
 
 
+/* OPEN DASHCAM */
+
+.open-cam-list .item-media-inner {
+    background: linear-gradient(to right, #48c6ef, #6f86d6);
+    color: white;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.open-dashcam-page .open-title {
+    text-align: center;
+}
+
+.air-dashcam-page .right a {
+    padding: 0 15px;
+}
+
+.air-dashcam-page .right .icon-gallery {
+    font-size: 23px !important;
+}
+
+.air-dashcam-page .right .icon-setting {
+    font-size: 23px !important;
+}
+
+
+/* NORMAL DASHCAM */
+
+.normal-dashcam-photo .navbar a {
+    padding: 0 15px;
+}
+
+.normal-dashcam-photo .navbar .icon-done {
+    font-size: 23px !important;
+}
+
+
+/* SHORTVIDEO DASHCAM */
+
+.shortvideo-dashcam-photo .navbar .icon-done {
+    font-size: 23px !important;
+}
+
+
+/* LOCKED DASHCAN  */
 
 
 /*INFO PAGES */
@@ -344,20 +411,18 @@ label.item-checkbox input[type=checkbox]:checked~.icon-checkbox {
     color: white;
 }
 
-.ios .tab-link-active{
+.ios .tab-link-active {
     border-bottom: 2px solid white;
 }
-.navbar:after{
+
+.navbar:after {
     background-color: transparent !important;
 }
 
 
-
-
 /* DELETE */
 
-
-.delete-cam-list .item-media-inner{
+.delete-cam-list .item-media-inner {
     background: linear-gradient(to right, #48c6ef, #6f86d6);
     color: white;
     width: 56px;
@@ -371,20 +436,23 @@ label.item-checkbox input[type=checkbox]:checked~.icon-checkbox {
     text-align: center;
 }
 
-.delete-cam-page .page-content .delete-title{
+.delete-cam-page .page-content .delete-title {
     text-align: center;
     font-size: 19px;
     font-family: 'product_reg';
     color: #333;
 }
-.delete-cam-list{
+
+.delete-cam-list {
     color: #333;
     font-family: 'product_reg';
     font-size: 19px;
 }
-#toolbarDeleteCam{
+
+#toolbarDeleteCam {
     background-color: #fff;
 }
+
 
 /* DASHCAM SETTING */
 
@@ -501,20 +569,20 @@ label.item-checkbox input[type=checkbox]:checked~.icon-checkbox {
 
 
 /* INSTALLATION PAGE*/
-.installation-img{
+
+.installation-img {
     width: 100%;
 }
 
-.installation-img2{
+.installation-img2 {
     width: 100%;
 }
-.installation-page .block p{
+
+.installation-page .block p {
     font-size: 16px;
     font-family: 'product_reg';
     color: #808080;
 }
-
-
 
 
 /* SUPPORT INFO PAGE */
@@ -525,12 +593,14 @@ label.item-checkbox input[type=checkbox]:checked~.icon-checkbox {
 
 
 /* FAQ PAGE */
-.faq-list .icon-right{
+
+.faq-list .icon-right {
     font-size: 19px;
     margin-top: 6px;
     color: #6F86D6;
 }
-.faq-list a{
+
+.faq-list a {
     color: #333;
     font-size: 19px;
 }
@@ -541,77 +611,89 @@ label.item-checkbox input[type=checkbox]:checked~.icon-checkbox {
 .equipment-list .item-title {
     white-space: normal;
 }
+
 .equipment-list a {
     color: #333;
     font-size: 19px;
 }
 
-.equipment-list li .block p{
+.equipment-list li .block p {
     font-size: 16px;
     font-family: 'product_reg';
     color: #808080;
 }
+
 
 /* CONNECTION FAQ PAGE */
 
 .connection-list .item-title {
     white-space: normal;
 }
+
 .connection-list a {
     color: #333;
     font-size: 19px;
 }
-.connection-list li .block p{
+
+.connection-list li .block p {
     font-size: 16px;
     font-family: 'product_reg';
     color: #808080;
 }
+
 
 /* TF CARD FAQ PAGE */
 
 .tfcard-list .item-title {
     white-space: normal;
 }
+
 .tfcard-list a {
     color: #333;
     font-size: 19px;
 }
+
 .tfcard-page .item-bytes {
     color: #6A8DD9;
 }
 
-.tfcard-list li .block p{
+.tfcard-list li .block p {
     font-size: 16px;
     font-family: 'product_reg';
     color: #808080;
 }
+
 
 /* RECORDING FAQ PAGE */
 
 .recording-list .item-title {
     white-space: normal;
 }
+
 .recording-list a {
     color: #333;
     font-size: 19px;
 }
-.recording-list li .block p{
+
+.recording-list li .block p {
     font-size: 16px;
     font-family: 'product_reg';
     color: #808080;
 }
+
 
 /* QUESTIONS FAQ PAGE */
 
 .questions-list .item-title {
     white-space: normal;
 }
+
 .questions-list a {
     color: #333;
     font-size: 19px;
 }
 
-.questions-list li .block p{
+.questions-list li .block p {
     font-size: 16px;
     font-family: 'product_reg';
     color: #808080;

@@ -1,6 +1,6 @@
 var routes = [{
-    path: '/login-screen/',
-    url: './resources/templates/login-screen.html',
+        path: '/login-screen/',
+        url: './resources/templates/login-screen.html',
     },
     {
         path: '/delete.cam/',
@@ -102,5 +102,25 @@ var routes = [{
         path: '/questions.faq/',
         url: './resources/templates/questions.faq.html',
     },
+    {
+        path: '/open.dashcam/',
+        url: './resources/templates/open.dashcam.html',
+    },
+    {
+        path: '/air.dashcam/',
+        url: './resources/templates/air.dashcam.html',
+    },
+    {
+        path: '/normal.dashcam/',
+        url: './resources/templates/normal.dashcam.html',
+    },
+    {
+        path: '/shortvideo.dashcam/',
+        url: './resources/templates/shortvideo.dashcam.html',
+    },
+    {
+        path: '/locked.dashcam/',
+        url: './resources/templates/locked.dashcam.html',
+    },
 
-    ]
+]

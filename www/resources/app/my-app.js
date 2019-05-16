@@ -37,14 +37,9 @@ var mainView = App.views.create('.view-main');
 
 
 
-
-
-
-
-
-document.addEventListener('deviceready', function() {
-    connectWifi();
-}, false);
+// document.addEventListener('deviceready', function() {
+//     connectWifi();
+// }, false);
 
 
 
@@ -53,21 +48,34 @@ document.addEventListener('deviceready', function() {
 //     WifiWizard2.getConnectedSSID();
 // }
 
-function connectWifi() {
-    WifiWizard2.timeout(4000).then(function() {
-        App.dialog.alert('timeout work');
-        WifiWizard2.getConnectedSSID(
-            function(result) {
-                App.dialog.alert(result);
-            },
-            function(error) {
-                App.dialog.alert(error);
-            }
-        );
-    })
-}
+// function connectWifi() {
+//     WifiWizard2.timeout(4000).then(function() {
+//         App.dialog.alert('timeout work');
+//         WifiWizard2.getConnectedSSID().then(function(ssid) {
+//             App.dialog.alert('SSID: ' + ssid);
+//         });
+//     })
+// }
 
 
+
+
+var videoUrl = 'http://192.168.1.1/livesubstream.h264';
+
+
+// Play a video with callbacks
+var options = {
+    successCallback: function() {
+        App.dialog.alert("Video was closed without error.");
+    },
+    errorCallback: function(errMsg) {
+        App.dialog.alert("Error! " + errMsg);
+    },
+    orientation: 'landscape',
+    shouldAutoClose: true, // true(default)/false
+    controls: true // true(default)/false. Used to hide controls on fullscreen
+};
+window.plugins.streamingMedia.playVideo(videoUrl, options);
 
 
 
@@ -163,8 +171,6 @@ function loadGalleryVideoPage() {
 }
 
 
-
-
 function loadInfoPage() {
     mainView.router.load({
         url: 'resources/templates/info.html',
@@ -231,3 +237,51 @@ function loadDeleteCamPage() {
         }
     });
 }
+
+
+
+
+
+
+$$(document).on('page:init', '.page[data-name="open.dashcam"]', function(e) {
+
+    var items = [];
+    for (var i = 1; i <= 3; i++) {
+        items.push({
+            title: 'Dachcam name #' + i,
+            value: i,
+        });
+    }
+
+    var deletecamList = App.virtualList.create({
+        // List Element
+        el: '.open-cam-list',
+        // Pass array with items
+        items: items,
+        // Custom search function for searchbar
+        searchAll: function(query, items) {
+            var found = [];
+            for (var i = 0; i < items.length; i++) {
+                if (items[i].title.toLowerCase().indexOf(query.toLowerCase()) >= 0 || query.trim() === '') found.push(i);
+            }
+            return found; //return array with mathced indexes
+        },
+        // List item Template7 template
+        itemTemplate: '<li>' +
+            '<label class="item-radio item-content">' +
+            '<input type="radio" name="demo-radio" value="{{value}}"/>' +
+            '<div class="item-media">' +
+            '<div class="item-media-inner">' +
+            '<p>DC</p>' +
+            '</div>' +
+            '</div>' +
+            '<div class="item-inner">' +
+            '<div class="item-title">{{title}}</div>' +
+            '</div>' +
+            '<i class="icon icon-radio"></i>' +
+            '</label>' +
+            '</li>',
+        // Item height
+        height: app.theme === 'ios' ? 73 : (app.theme === 'md' ? 73 : 73),
+    });
+});
