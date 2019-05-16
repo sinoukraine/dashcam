@@ -2,7 +2,7 @@
 <widget 
   version="1.0.0"
   android-versionCode="1" 
-  ios-CFBundleVersion="11" 
+  ios-CFBundleVersion="12" 
   id="com.dashcam.app" 
   xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US" >
     <name>Dash Cam</name>
@@ -59,6 +59,7 @@
     <plugin name="cordova-plugin-splashscreen" source="npm" spec="5.0.2" />
     <plugin name="cordova-plugin-camera" source="npm" spec="4.0.3"  />
     <plugin spec="https://github.com/phonegap/phonegap-mobile-accessibility.git" source="git" />
+    <plugin spec="https://github.com/nchutchind/cordova-plugin-streaming-media" source="git" />
     <!-- <plugin name="cordova-android-support-gradle-release" source="npm" /> -->
     <!-- <plugin name="cordova-android-firebase-gradle-release" source="npm" /> -->
     

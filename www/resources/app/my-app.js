@@ -60,8 +60,7 @@ var mainView = App.views.create('.view-main');
 
 
 
-var videoUrl = 'http://192.168.1.1/livesubstream.h264';
-
+var videoUrl = 'http://192.168.1.1/livesubstream.h264'; // эту ссылку взял с доки по камере 
 
 // Play a video with callbacks
 var options = {
@@ -75,8 +74,18 @@ var options = {
     shouldAutoClose: true, // true(default)/false
     controls: true // true(default)/false. Used to hide controls on fullscreen
 };
-window.plugins.streamingMedia.playVideo(videoUrl, options);
 
+function startLive() {
+    App.dialog.alert('start function');
+    window.plugins.streamingMedia.playVideo(videoUrl, options);
+}
+
+
+
+$$('#connectCam').on('click', function() {
+    App.dialog.alert('start Live');
+    startLive();
+});
 
 
 $$('#mainMenu li').on('click', menuList)
@@ -121,10 +130,6 @@ function menuList() {
 }
 
 
-
-$$('#connectCam').on('click', function() {
-    console.log('click connect');
-});
 
 
 
