@@ -60,7 +60,7 @@ var mainView = App.views.create('.view-main');
 
 
 
-var videoUrl = 'http://192.168.1.1/livesubstream.h264'; // эту ссылку взял с доки по камере 
+var videoUrl = 'https://www.youtube.com/watch?v=jXFkL0yuS2Q'; // эту ссылку взял с доки по камере 
 
 // Play a video with callbacks
 var options = {
@@ -70,7 +70,7 @@ var options = {
     errorCallback: function(errMsg) {
         App.dialog.alert("Error! " + errMsg);
     },
-    orientation: 'landscape',
+    orientation: 'portrait', //landscape
     shouldAutoClose: true, // true(default)/false
     controls: true // true(default)/false. Used to hide controls on fullscreen
 };
@@ -79,7 +79,6 @@ function startLive() {
     App.dialog.alert('start function');
     window.plugins.streamingMedia.playVideo(videoUrl, options);
 }
-
 
 
 $$('#connectCam').on('click', function() {

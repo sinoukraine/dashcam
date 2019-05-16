@@ -2,7 +2,7 @@
 <widget 
   version="1.0.0"
   android-versionCode="1" 
-  ios-CFBundleVersion="12" 
+  ios-CFBundleVersion="14" 
   id="com.dashcam.app" 
   xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US" >
     <name>Dash Cam</name>
